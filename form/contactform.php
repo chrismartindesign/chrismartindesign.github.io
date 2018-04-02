@@ -1,12 +1,12 @@
 <?php
-$EmailFrom = "contact@yourmail.com";
-$EmailTo = "contact@yourmail.com";
-$Subject = "New Message from Blvck Template";
-$Name = Trim(stripslashes($_POST['InputName'])); 
-$Phone = Trim(stripslashes($_POST['InputPhone'])); 
+$EmailFrom = "chris.martin.port@gmail.com";
+$EmailTo = "chris.martin.port@gmail.com";
+$Subject = "New Message from Portfolio Form";
+$Name = Trim(stripslashes($_POST['InputName']));
+$Phone = Trim(stripslashes($_POST['InputPhone']));
 $Email = Trim(stripslashes($_POST['InputEmail']));
-$Subject = Trim(stripslashes($_POST['InputSubject'])); 
-$Message = Trim(stripslashes($_POST['InputMessage'])); 
+$Subject = Trim(stripslashes($_POST['InputSubject']));
+$Message = Trim(stripslashes($_POST['InputMessage']));
 
 // validation
 $validationOK=true;
@@ -30,10 +30,10 @@ $Body .= "Message: ";
 $Body .= $Message;
 $Body .= "\n";
 
-// send email 
+// send email
 $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
-// redirect to success page 
+// redirect to success page
 if ($success){
   print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
 }
